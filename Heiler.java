@@ -19,7 +19,7 @@ public class Heiler extends Karacter
     public Heiler(Wartebank meinePraxis, int heilkraft)
     {
         // Instanzvariable initialisieren
-        super("Hipokrates", 100,1);
+        super("Hipokrates", 100,2);
         this.heilkraft = heilkraft;
         this.meinePraxis = meinePraxis;
     }
