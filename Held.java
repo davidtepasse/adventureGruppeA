@@ -47,6 +47,9 @@ class Held extends Karacter {
           if (gesundheit <= 0) {
               System.out.println("Du bist tot!");
           }
+          else {
+              geld.gewinn(5);//wenn ein Karakter jemand anderen tötet bekommt er geld
+          }
           //level++;
       }
 
