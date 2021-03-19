@@ -12,13 +12,14 @@ class Held extends Karacter {
     int Stärke = 5;
     int Verteidigung = 5;
     int Agilität = 5;
+    int Gesundheit_Max;
     public Held(String name, int vermoegen, int gesundheit, int kampf, boolean privat) {
         super(name, gesundheit, kampf);
         meinInventar = new Inventar();
         this.vermoegen = vermoegen;
         this.privat = privat;
         meinRucksack = new Rucksack();
-
+        Gesundheit_Max = gesundheit;
     }
 
     //zum testen
