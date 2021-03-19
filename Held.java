@@ -13,7 +13,7 @@ class Held extends Karacter {
     int Verteidigung = 5;
     int Agilität = 5;
     int Gesundheit_Max;
-    private Waehrung geld;
+    int dublonen;
    
     public Held(String name, int gesundheit, int kampf, boolean privat) {
         super(name, gesundheit, kampf);
@@ -21,7 +21,6 @@ class Held extends Karacter {
         this.privat = privat;
         meinRucksack = new Rucksack();
         Gesundheit_Max = gesundheit;
-        geld = new Waehrung();
     }
 
     //zum testen
@@ -30,7 +29,7 @@ class Held extends Karacter {
         meinInventar = new Inventar();
         this.privat = privat;
         meinRucksack = new Rucksack();
-
+        dublonen = 100;
     }
     
     /**
@@ -45,7 +44,7 @@ class Held extends Karacter {
               System.out.println("Du bist tot!");
           }
           else {
-              geld.gewinn(5);//wenn ein Karakter jemand anderen tötet bekommt er geld
+              dublonen = dublonen + 5;//wenn ein Karakter jemand anderen tötet bekommt er geld
           }
           //level++;
       }
@@ -77,5 +76,22 @@ class Held extends Karacter {
     
     public boolean getPrivat(){
         return privat;
+    }
+    
+    public int gewinn(int get)
+    {
+        dublonen = dublonen + get;
+        return dublonen;
+    }
+    
+    public int verlust(int loose)
+    {
+        dublonen = dublonen - loose;
+        return dublonen;
+    }
+    
+    public int Kontostand()
+    {
+        return dublonen;
     }
 }
