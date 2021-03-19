@@ -18,13 +18,13 @@ public class Waehrung
         dublonen = 100;
     }
 
-    public int geldverlieren(int loose)
+    public int verlust(int loose)
     {
         dublonen = dublonen - loose;
         return dublonen;
     }
     
-    public int geldgewinnen(int get)
+    public int gewinn(int get)
     {
         dublonen = dublonen + get;
         return dublonen;
