@@ -1,3 +1,4 @@
+
 /**
  * Klasse Held, erbt von Character
  * @version 1.0
@@ -13,6 +14,8 @@ class Held extends Karacter {
     int Verteidigung = 5;
     int Agilität = 5;
     int Gesundheit_Max;
+    private Waehrung geld;
+   
     public Held(String name, int vermoegen, int gesundheit, int kampf, boolean privat) {
         super(name, gesundheit, kampf);
         meinInventar = new Inventar();
@@ -20,6 +23,7 @@ class Held extends Karacter {
         this.privat = privat;
         meinRucksack = new Rucksack();
         Gesundheit_Max = gesundheit;
+        geld = new Waehrung();
     }
 
     //zum testen
