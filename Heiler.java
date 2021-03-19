@@ -12,7 +12,8 @@ public class Heiler extends Karacter
     Wartebank meinePraxis;
     // allgemeine Heilkraft
     private int heilkraft;
-    private Waehrung geld;
+    private Held held;
+    
     /**
      * Konstruktor für Objekte der Klasse Heiler
      * @param   eine Queue als Wartebank
@@ -23,7 +24,6 @@ public class Heiler extends Karacter
         super("Hipokrates", 100,1);
         this.heilkraft = heilkraft;
         this.meinePraxis = meinePraxis;
-        geld = new Waehrung();
     }
     
     /**
@@ -32,6 +32,6 @@ public class Heiler extends Karacter
     public void heilen() {
         Held temp = meinePraxis.heldVorlassen();
         temp.setGesundheit(temp.getGesundheit()+heilkraft);
-        geld.verlust(10);
+        held.verlust(10);
     }
 }
