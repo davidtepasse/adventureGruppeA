@@ -5,7 +5,6 @@
  * @author dt
  */
 class Held extends Karacter {
-    private int vermoegen;
     private Inventar meinInventar;
     private int angriffswert;
     private boolean privat;
@@ -16,10 +15,9 @@ class Held extends Karacter {
     int Gesundheit_Max;
     private Waehrung geld;
    
-    public Held(String name, int vermoegen, int gesundheit, int kampf, boolean privat) {
+    public Held(String name, int gesundheit, int kampf, boolean privat) {
         super(name, gesundheit, kampf);
         meinInventar = new Inventar();
-        this.vermoegen = vermoegen;
         this.privat = privat;
         meinRucksack = new Rucksack();
         Gesundheit_Max = gesundheit;
@@ -30,7 +28,6 @@ class Held extends Karacter {
     public Held(boolean privat) {
         super("test", 100, 100);
         meinInventar = new Inventar();
-        this.vermoegen = 100;
         this.privat = privat;
         meinRucksack = new Rucksack();
 
