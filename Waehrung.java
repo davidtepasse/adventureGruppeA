@@ -29,4 +29,10 @@ public class Waehrung
         dublonen = dublonen + get;
         return dublonen;
     }
+    
+    public int kontostand()
+    {
+     return dublonen;  
+     //System.out.println("Du hast "dublonen" auf den Konto");
+    }
 }
