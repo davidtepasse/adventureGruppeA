@@ -9,7 +9,9 @@ class Held extends Karacter {
     private int angriffswert;
     private boolean privat;
     private Rucksack meinRucksack;
-
+    int Stärke = 5;
+    int Verteidigung = 5;
+    int Agilität = 5;
     public Held(String name, int vermoegen, int leben, int kampf, boolean privat) {
         super(name, leben, kampf);
         meinInventar = new Inventar();

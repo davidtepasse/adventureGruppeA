@@ -56,12 +56,12 @@ public class Effekt_Ringe
             case "Gesundheitsring":
             if(erster_Ring == null){
                 player.Gesundheit_Max += Zusatz_Gesundheit;
-                player.Gesundheit += Zusatz_Gesundheit;
+                player.gesundheit += Zusatz_Gesundheit;
                 erster_Ring = equip_ring;
             }
             else if(zweiter_Ring == null){
                 player.Gesundheit_Max += Zusatz_Gesundheit;
-                player.Gesundheit += Zusatz_Gesundheit;
+                player.gesundheit += Zusatz_Gesundheit;
                 zweiter_Ring = equip_ring;
             }
             else{
@@ -141,8 +141,8 @@ public class Effekt_Ringe
         switch(null_Ring.Ringname){
             case "Gesundheitsring":
             Player.Gesundheit_Max -= Zusatz_Gesundheit;
-            if(Player.Gesundheit >= Player.Gesundheit_Max){
-                Player.Gesundheit = Player.Gesundheit_Max;
+            if(Player.gesundheit >= Player.Gesundheit_Max){
+                Player.gesundheit = Player.Gesundheit_Max;
             }
             break;
             
