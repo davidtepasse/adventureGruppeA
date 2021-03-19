@@ -2,7 +2,7 @@
 /**
  * Write a description of class Ringe here.
  *
- * @author (your name)
+ * @author (Jens und Alexa)
  * @version (a version number or a date)
  */
 public class Effekt_Ringe
