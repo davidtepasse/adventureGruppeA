@@ -8,28 +8,28 @@ abstract class Karacter
 {
     // instance variables - replace the example below with your own
     protected String name;
-    protected int lebenspunkte;
+    protected int gesundheit;
     protected int kampfkraft;
     /**
      * Constructor for objects of class Character
      */
-    public Karacter(String name, int leben, int kampf)
+    public Karacter(String name, int gesundheit, int kampf)
     {
         // initialise instance variables
         this.name = name;
-        this.lebenspunkte = leben;
+        this.gesundheit = gesundheit;
         this.kampfkraft = kampf;
     }
 
     /** 
      * getter und setter
      */
-    public int getLebenspunkte() {
-        return lebenspunkte;
+    public int getGesundheit() {
+        return gesundheit;
     }
     
-    public void setLebenspunkte(int lebenspunkte) {
-        this.lebenspunkte = lebenspunkte;
+    public void setGesundheit(int gesundheit) {
+        this.gesundheit = gesundheit;
     }
     
     public int getKampfKraft() {

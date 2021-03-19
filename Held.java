@@ -12,8 +12,8 @@ class Held extends Karacter {
     int Stärke = 5;
     int Verteidigung = 5;
     int Agilität = 5;
-    public Held(String name, int vermoegen, int leben, int kampf, boolean privat) {
-        super(name, leben, kampf);
+    public Held(String name, int vermoegen, int gesundheit, int kampf, boolean privat) {
+        super(name, gesundheit, kampf);
         meinInventar = new Inventar();
         this.vermoegen = vermoegen;
         this.privat = privat;
@@ -39,14 +39,14 @@ class Held extends Karacter {
      */
       public void angreifen(Monster g, Kampfregel r) {
           r.kampf(this, g);
-          if (lebenspunkte <= 0) {
+          if (gesundheit <= 0) {
               System.out.println("Du bist tot!");
           }
           //level++;
       }
 
     public void angriffswertBerechnen() {
-        angriffswert = lebenspunkte + meinInventar.nehmeAusDemInventar().getBonus();
+        angriffswert = gesundheit + meinInventar.nehmeAusDemInventar().getBonus();
     }
     
     public int getAngriffswert() {

@@ -18,14 +18,14 @@ public class Kampfregel {
      * @param k2 das Monster
      */
     public void kampf(Held k1, Monster k2) {
-        while (k1.getLebenspunkte() > 0 && k2.getLebenspunkte() > 0) {
+        while (k1.getGesundheit() > 0 && k2.getGesundheit() > 0) {
             int bonusA = wuerfel10.wuerfeln() + wuerfel6.wuerfeln();
             int bonusB = wuerfel10.wuerfeln() + wuerfel6.wuerfeln();
             if (k1.getAngriffswert() + bonusA < k2.getKampfKraft() + bonusB) {
-                k1.setLebenspunkte(k1.getLebenspunkte()-1);
+                k1.setGesundheit(k1.getGesundheit()-1);
             }
             else {
-                k2.setLebenspunkte(k2.getLebenspunkte()-1);
+                k2.setGesundheit(k2.getGesundheit()-1);
             }
         }
     }

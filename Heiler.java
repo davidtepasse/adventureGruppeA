@@ -29,7 +29,7 @@ public class Heiler extends Karacter
      */
     public void heilen() {
         Held temp = meinePraxis.heldVorlassen();
-        temp.setLebenspunkte(temp.getLebenspunkte()+heilkraft);
+        temp.setGesundheit(temp.getGesundheit()+heilkraft);
     }
  
 }
