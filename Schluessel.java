@@ -3,7 +3,7 @@
  * ein geheimer schluessel
  *
  * @author dt
- * @version 0.1
+ * @version 0.2
  */
 public class Schluessel extends Gegenstand
 {
