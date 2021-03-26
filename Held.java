@@ -17,7 +17,7 @@ class Held extends Karacter {
     int dublonen;
        
     int monstercounter;
-    
+    private Level level;
     public Held(String name, int gesundheit, int kampf, boolean privat, int dublonen) {
         super(name, gesundheit, kampf);
         meinInventar = new Inventar();
@@ -27,6 +27,7 @@ class Held extends Karacter {
         this.dublonen = dublonen;
         
         monstercounter = 0;
+        level = new Level();
     }
 
     //zum testen
@@ -58,11 +59,8 @@ class Held extends Karacter {
       }
 
     public void angriffswertBerechnen() {
-        
-        
-        
-        
-        angriffswert = gesundheit + meinInventar.nehmeAusDemInventar().getBonus();
+        int gesundheitVer = (int)Math.round(level.levelbonus(monstercounter, gesundheit));
+        angriffswert = gesundheitVer + meinInventar.nehmeAusDemInventar().getBonus();
     }
     
     public int getAngriffswert() {

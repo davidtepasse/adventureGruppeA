@@ -22,7 +22,7 @@ public class Level
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public double levelbonus(int monstercount , int gesundheit)
+    public double levelbonus(double monstercount , double gesundheit)
     {
         double gVerrrechnet = 0;
         if(monstercount < 10){
