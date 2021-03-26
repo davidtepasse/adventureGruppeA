@@ -1,9 +1,9 @@
 
 /**
- * Beschreiben Sie hier die Klasse Level.
+ * Berechnung der Level mit Bonus
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Jannis, Niklas, Ole 
+ * @version 26.03.21
  */
 public class Level
 {
@@ -17,10 +17,10 @@ public class Level
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Gesundheitsbonus pro Monstertode
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  Monstercount 
+     * @return Mulitplikator Gesundheit 
      */
     public double levelbonus(double monstercount , double gesundheit)
     {
@@ -48,6 +48,9 @@ public class Level
         }
         return gVerrrechnet;
     }
+    /**
+     * Level Ausgabe 
+     */
     public int level(int monstercount)
     {
         int level = 0;
