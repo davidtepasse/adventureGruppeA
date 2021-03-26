@@ -13,14 +13,20 @@ class Held extends Karacter {
     int Verteidigung = 5;
     int Agilität = 5;
     int Gesundheit_Max;
+    
     int dublonen;
-   
-    public Held(String name, int gesundheit, int kampf, boolean privat) {
+       
+    int monstercounter;
+    
+    public Held(String name, int gesundheit, int kampf, boolean privat, int dublonen) {
         super(name, gesundheit, kampf);
         meinInventar = new Inventar();
         this.privat = privat;
         meinRucksack = new Rucksack();
         Gesundheit_Max = gesundheit;
+        this.dublonen = dublonen;
+        
+        monstercounter = 0;
     }
 
     //zum testen
@@ -45,11 +51,17 @@ class Held extends Karacter {
           }
           else {
               dublonen = dublonen + 5;//wenn ein Karakter jemand anderen tötet bekommt er geld
+              monstercounter++;
           }
+          
           //level++;
       }
 
     public void angriffswertBerechnen() {
+        
+        
+        
+        
         angriffswert = gesundheit + meinInventar.nehmeAusDemInventar().getBonus();
     }
     
