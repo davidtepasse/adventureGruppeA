@@ -13,9 +13,9 @@ class Held extends Karacter {
     int Verteidigung = 5;
     int Agilität = 5;
     int Gesundheit_Max;
-    
+    // Geldsystem
     int dublonen;
-       
+    // Levelsystem  
     int monstercounter;
     
     public Held(String name, int gesundheit, int kampf, boolean privat, int dublonen) {
