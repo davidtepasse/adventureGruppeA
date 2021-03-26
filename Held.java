@@ -67,7 +67,11 @@ class Held extends Karacter {
         this.angriffswertBerechnen();
         return angriffswert;
     }
-      
+    
+    public int getGesundheit() {
+        int gesundheitVer = (int)Math.round(level.levelbonus(monstercounter, gesundheit));
+        return gesundheitVer;
+    }
     
     /**
      * nimmt eine Waffe und fügt sie dem inventar hinzu
