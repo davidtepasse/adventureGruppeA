@@ -35,7 +35,7 @@ public class Rüstung {
      * Berechnet den Bonus der Rüstung
      */
     public void bonusBerechnen() {
-        bonus =  material.getRüstungsmaterialBonus()*zustand/100;
+        //bonus =  material.getRüstungsmaterialBonus()*zustand/100;
     }
 
     // GETTER UND SETTER
