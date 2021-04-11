@@ -23,32 +23,32 @@ public class Inventar
         this.fuegeHinzu(new Waffe(new Material("Holz",10), 10, "Knüpel"));
         this.fuegeHinzu(new Waffe(new Material("Titan",1000), 100, "Titanschwert"));
         this.fuegeHinzu(new Waffe(new Material("Holz",10), 1, "Zauberstab"));
-        this.fuegeHinzu(new Waffe(new Material("Elektro",1), 10000, "Teaser"));
+        this.fuegeHinzu(new Waffe(new Material("Elektro",1), 10000, "Zeus x27"));
     }
-        
+
     public void fuegeHinzu(Waffe w){
         meineWaffen[zaehler] = w;
         zaehler++;
     }
-    
+
     public Waffe nehmeAusDemInventar(int i){
         return meineWaffen[i];
     }
-    
+
     public Waffe nehmeAusDemInventar(){
         return meineWaffen[zaehler-1];
     }
-    
+
     // gibt die stärkste Waffe aus dem Inventar zurück
     public Waffe nehmeStaerkste(){
         Waffe staerkste = meineWaffen[0];
         for(int i = 1; i< zaehler; i++){
             if(meineWaffen[i].getBonus()>staerkste.getBonus())
-            staerkste = meineWaffen[i];
+                staerkste = meineWaffen[i];
         }
         return staerkste;
     }
-    
+
     //Sortiert das Inventar nach der stärke der Waffen
     public void sortiereDasInventar(){
         //nachher ist das Feld aufsteigend sortiert
@@ -63,7 +63,6 @@ public class Inventar
             }
         }
     }
-    
-    
+
 
 }
